@@ -31,7 +31,7 @@ int Randomized_Partition(int a[], int p, int r)
 {
 	int pvt, n, temp;
 	
-	pvt = p + rand() % (r + 1);
+	pvt = p + rand() % (r - p + 1);
 	swap(&a[r], &a[pvt]);
 
 	return partition(a, p, r);
